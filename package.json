@@ -1,0 +1,19 @@
+{
+  "name": "whereismypasta",
+  "version": "1.0.0",
+  "description": "A personal web UI project to display videos from the YouTube channel @AirbourneLens",
+  "main": "src/js/app.js",
+  "scripts": {
+    "start": "live-server src",
+    "build": "echo 'Build step not defined'",
+    "test": "echo 'No tests defined'"
+  },
+  "dependencies": {
+    "axios": "^0.21.1"
+  },
+  "devDependencies": {
+    "live-server": "^1.2.1"
+  },
+  "author": "Your Name",
+  "license": "MIT"
+}
