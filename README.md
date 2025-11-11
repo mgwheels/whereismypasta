@@ -1,25 +1,24 @@
-# Airbourne Lens Viewer
+# Whereismypasta
 
 This project is a simple web application that displays videos from the YouTube channel @AirbourneLens. 
 
 ## Project Structure
 
 ```
-airbourne-lens-viewer
-├── src
-│   ├── index.html         # Main HTML document
-│   ├── css
-│   │   └── styles.css     # Styles for the website
-│   ├── js
-│   │   ├── app.js         # Main JavaScript file
-│   │   ├── youtube-api.js # Functions to interact with the YouTube API
-│   │   └── config.js      # Configuration settings
-├── public
-│   └── assets             # Directory for static assets
-├── package.json           # npm configuration file
-├── .env                   # Environment variables
-├── .gitignore             # Files to ignore by Git
-└── README.md              # Project documentation
+src
+├── index.html         # Main HTML document
+├── css
+│   └── styles.css     # Styles for the website
+├── js
+│   ├── app.js         # Main JavaScript file
+│   ├── youtube-api.js # Functions to interact with the YouTube API
+│   └── config.js      # Configuration settings
+public
+└── assets             # Directory for static assets
+package.json           # npm configuration file
+.env                   # Environment variables
+.gitignore             # Files to ignore by Git
+README.md              # Project documentation
 ```
 
 ## Setup Instructions
