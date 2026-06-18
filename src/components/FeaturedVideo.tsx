@@ -21,8 +21,8 @@ import './FeaturedVideo.css';
  */
 
 const LATEST_VIDEO = {
-  id: 'PyAxem8CfSk',
-  title: 'You & Me by Cocoon Maldives | Seaplane Landing & Takeoff in 4K',
+  id: 'Yka1oKuwibY',
+  title: 'Abandoned Shipwrecks at The Strand | Kent Coastline from Above in 4K',
 };
 
 export default function FeaturedVideo() {
