@@ -27,7 +27,7 @@ const LATEST_VIDEO = {
 
 export default function FeaturedVideo() {
   return (
-    <section className="featured">
+    <section id="featured-video" className="featured">
       <div className="video-wrapper">
         <iframe
           src={`https://www.youtube.com/embed/${LATEST_VIDEO.id}`}

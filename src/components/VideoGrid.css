@@ -6,6 +6,7 @@
   font-size: 1.25rem;
   font-weight: 600;
   margin-bottom: 1rem;
+  color: #e8e4dd;
 }
 
 .video-grid {
@@ -27,22 +28,25 @@
 }
 
 .video-card {
-  background-color: #ffffff;
+  background-color: #252226;
   border-radius: 0.75rem;
   overflow: hidden;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-  transition: box-shadow 0.2s;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  transition: box-shadow 0.2s, transform 0.2s;
+  border: 1px solid #333033;
 }
 
 .video-card:hover {
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.35);
+  transform: translateY(-2px);
+  border-color: #d4a84b40;
 }
 
 .thumbnail-wrapper {
   position: relative;
   width: 100%;
   padding-bottom: 56.25%;
-  background-color: #0f172a;
+  background-color: #1a1818;
 }
 
 .thumbnail-wrapper img {
@@ -70,11 +74,12 @@
 .card-title {
   font-size: 0.875rem;
   font-weight: 500;
-  color: #1e293b;
+  color: #e8e4dd;
   display: -webkit-box;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
   overflow: hidden;
+  line-height: 1.4;
 }
 
 .card-placeholder {
@@ -82,7 +87,7 @@
   align-items: center;
   justify-content: center;
   text-align: center;
-  color: #94a3b8;
+  color: #6b686b;
   font-size: 0.875rem;
   min-height: 200px;
   padding: 1rem;

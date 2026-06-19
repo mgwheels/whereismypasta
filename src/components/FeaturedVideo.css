@@ -1,11 +1,12 @@
 .featured {
   margin-bottom: 2rem;
+  scroll-margin-top: 5rem;
 }
 
 .video-title {
   font-size: 1.25rem;
   font-weight: 600;
-  color: #1e293b;
+  color: #e8e4dd;
   margin-top: 1rem;
   line-height: 1.4;
 }
@@ -17,6 +18,7 @@
   background-color: #000;
   border-radius: 0.75rem;
   overflow: hidden;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
 }
 
 .video-wrapper iframe {

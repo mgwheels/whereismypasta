@@ -6,23 +6,31 @@ import VideoGrid from '../components/VideoGrid';
 
 <BaseLayout title="Airbourne Lens">
   <section class="hero">
-    <h1 class="hero-title">Exploring the world from above.</h1>
-    <p class="hero-subtitle">
-      Cinematic 4K aerial footage from Scotland, the Maldives, Costa Rica, and beyond.
-      <br />
-      Captured with DJI drones by a hobbyist with a passion for flight.
-    </p>
-    <a
-      class="subscribe-btn"
-      href="https://youtube.com/@AirbourneLens"
-      target="_blank"
-      rel="noopener noreferrer"
-    >
-      <svg class="btn-icon" viewBox="0 0 24 24" fill="currentColor">
-        <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
+    <div class="hero-body">
+      <span class="hero-badge">Airbourne Lens</span>
+      <h1 class="hero-title">Exploring the world from above.</h1>
+      <p class="hero-subtitle">
+        Cinematic 4K aerial footage from Scotland, the Maldives, Costa Rica, and beyond.
+        <br />
+        Captured with DJI drones by a hobbyist with a passion for flight.
+      </p>
+      <a
+        class="subscribe-btn"
+        href="https://youtube.com/@AirbourneLens"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <svg class="btn-icon" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
+        </svg>
+        Subscribe on YouTube
+      </a>
+    </div>
+    <button id="scroll-btn" class="scroll-indicator" aria-label="Scroll to featured video">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M7 13l5 5 5-5M7 6l5 5 5-5" />
       </svg>
-      Subscribe on YouTube
-    </a>
+    </button>
   </section>
 
   <FeaturedVideo client:load />
@@ -31,45 +39,114 @@ import VideoGrid from '../components/VideoGrid';
 
 <style>
   .hero {
+    min-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     text-align: center;
-    padding: 2rem 0 1.5rem;
+    padding: 6rem 1rem 3rem;
+    position: relative;
+    background:
+      radial-gradient(ellipse 80% 40% at 50% 0%, rgba(212, 168, 75, 0.1) 0%, transparent 60%),
+      linear-gradient(180deg, #1e1a18 0%, #16161a 100%);
+  }
+
+  .hero-body {
+    max-width: 48rem;
+  }
+
+  .hero-badge {
+    display: inline-block;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: #d4a84b;
+    margin-bottom: 1rem;
   }
 
   .hero-title {
-    font-size: 1.75rem;
+    font-size: 2.5rem;
     font-weight: 700;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.75rem;
+    color: #e8e4dd;
+    line-height: 1.15;
+    letter-spacing: -0.02em;
   }
 
   .hero-subtitle {
-    color: #64748b;
+    color: #878388;
     max-width: 36rem;
-    margin: 0 auto 1.25rem;
+    margin: 0 auto 1.5rem;
     line-height: 1.6;
-    font-size: 0.95rem;
+    font-size: 1rem;
   }
 
   .subscribe-btn {
     display: inline-flex;
     align-items: center;
     gap: 0.5rem;
-    padding: 0.65rem 1.5rem;
-    background-color: #ef4444;
-    color: #fff;
+    padding: 0.75rem 1.75rem;
+    background-color: #d4a84b;
+    color: #16161a;
     font-weight: 600;
-    font-size: 0.875rem;
+    font-size: 0.9rem;
     border-radius: 9999px;
     text-decoration: none;
     transition: background-color 0.15s;
   }
 
   .subscribe-btn:hover {
-    background-color: #dc2626;
+    background-color: #c49a3f;
   }
 
   .btn-icon {
     width: 1.25rem;
     height: 1.25rem;
   }
+
+  .scroll-indicator {
+    position: absolute;
+    bottom: 1.5rem;
+    color: #6b686b;
+    animation: bounce 2.5s infinite;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    display: flex;
+  }
+
+  @keyframes bounce {
+    0%, 100% { transform: translateY(0); opacity: 0.4; }
+    50% { transform: translateY(6px); opacity: 1; }
+  }
+
+  @media (max-width: 640px) {
+    .hero {
+      min-height: 80vh;
+      padding: 5rem 1rem 2rem;
+    }
+
+    .hero-title {
+      font-size: 1.75rem;
+    }
+
+    .hero-subtitle {
+      font-size: 0.9rem;
+    }
+
+    .subscribe-btn {
+      padding: 0.65rem 1.5rem;
+      font-size: 0.875rem;
+    }
+  }
 </style>
+
+<script>
+  document.getElementById('scroll-btn')?.addEventListener('click', () => {
+    document.getElementById('featured-video')?.scrollIntoView({ behavior: 'smooth' });
+  });
+</script>
 
