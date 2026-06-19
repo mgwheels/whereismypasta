@@ -13,8 +13,8 @@ html {
 body {
   min-height: 100%;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-  background-color: #f8fafc;
-  color: #1e293b;
+  background-color: #16161a;
+  color: #e8e4dd;
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
 }

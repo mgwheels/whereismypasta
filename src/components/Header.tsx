@@ -6,7 +6,7 @@ const CHANNEL_URL = 'https://youtube.com/@AirbourneLens';
 
 const NAV_LINKS = [
   { label: 'Home', href: '/' },
-  { label: 'Videos', href: '/videos' },
+  { label: 'Locations', href: '/locations' },
   { label: 'About', href: '/about' },
 ];
 
