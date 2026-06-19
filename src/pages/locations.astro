@@ -1,0 +1,171 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const LOCATIONS = [
+  {
+    videoId: '2aJifMdHYQY',
+    name: 'Maldives',
+    description: 'Overwater villas and crystal-clear turquoise waters captured from above.',
+  },
+  {
+    videoId: 'GEfi1wsGIkc',
+    name: 'Bayham Abbey, Kent',
+    description: 'Medieval monastery ruins nestled in the English countryside.',
+  },
+  {
+    videoId: '_lufnNXU6GI',
+    name: 'Belle Mare, Mauritius',
+    description: 'Pristine sandbanks and tiny islets off the coast of paradise.',
+  },
+  {
+    videoId: 'Yka1oKuwibY',
+    name: 'The Strand, Kent',
+    description: 'Abandoned shipwrecks along the Kent coastline from above.',
+  },
+  {
+    videoId: 'dQaFg0C-pZE',
+    name: 'Dunn\'s River Falls, Jamaica',
+    description: 'Lush tropical resort and cascading waterfalls captured from the sky.',
+  },
+  {
+    videoId: 'bRHhmWsm5E4',
+    name: 'Neptune\'s Tower, Kingsgate Bay',
+    description: 'Dramatic sea stacks and rugged cliff formations along the coast.',
+  },
+  {
+    videoId: '3CgvVjRzDlg',
+    name: 'Kingsgate Castle, Kent',
+    description: 'Historic clifftop castle with sweeping views of the English Channel.',
+  },
+];
+---
+
+<BaseLayout title="Locations | Airbourne Lens">
+  <section class="locations-page">
+    <h1 class="page-title">Destinations</h1>
+    <p class="page-subtitle">
+      Every location tells a story. Explore the places we&rsquo;ve flown.
+    </p>
+    <div class="locations-grid">
+      {LOCATIONS.map((loc) => (
+        <a
+          key={loc.videoId}
+          href={`https://www.youtube.com/watch?v=${loc.videoId}`}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="location-card"
+        >
+          <div class="loc-thumb-wrapper">
+            <img
+              src={`https://img.youtube.com/vi/${loc.videoId}/hqdefault.jpg`}
+              alt={loc.name}
+              loading="lazy"
+            />
+          </div>
+          <div class="loc-body">
+            <h2 class="loc-name">{loc.name}</h2>
+            <p class="loc-desc">{loc.description}</p>
+          </div>
+        </a>
+      ))}
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .locations-page {
+    padding-top: 2rem;
+  }
+
+  .page-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #e8e4dd;
+    margin-bottom: 0.5rem;
+  }
+
+  .page-subtitle {
+    color: #878388;
+    font-size: 0.95rem;
+    max-width: 32rem;
+    margin-bottom: 2rem;
+    line-height: 1.5;
+  }
+
+  .locations-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  @media (min-width: 640px) {
+    .locations-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .locations-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  .location-card {
+    display: flex;
+    flex-direction: column;
+    background-color: #252226;
+    border-radius: 0.75rem;
+    overflow: hidden;
+    border: 1px solid #333033;
+    text-decoration: none;
+    transition: box-shadow 0.2s, transform 0.2s, border-color 0.2s;
+  }
+
+  .location-card:hover {
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.35);
+    transform: translateY(-2px);
+    border-color: #d4a84b40;
+  }
+
+  .loc-thumb-wrapper {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%;
+    background-color: #1a1818;
+    overflow: hidden;
+  }
+
+  .loc-thumb-wrapper img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s, filter 0.3s;
+  }
+
+  .location-card:hover .loc-thumb-wrapper img {
+    transform: scale(1.05);
+    filter: brightness(0.7);
+  }
+
+  .loc-body {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+  }
+
+  .loc-name {
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: #e8e4dd;
+  }
+
+  .loc-desc {
+    font-size: 0.85rem;
+    color: #878388;
+    line-height: 1.5;
+  }
+</style>
