@@ -3,24 +3,150 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 ---
 
 <BaseLayout title="About | Airbourne Lens">
-  <section>
-    <h1>About</h1>
-    <p>About page coming soon.</p>
+  <section class="about-page">
+    <div class="about-intro">
+      <h1 class="about-title">About Airbourne Lens</h1>
+      <p class="about-tagline">
+        Capturing the world from unique perspectives&nbsp;&mdash; in the air and on the ground.
+      </p>
+    </div>
+
+    <div class="about-body">
+      <p>
+        I&rsquo;m a drone enthusiast filming in 4K, using the DJI Neo, DJI Mini&nbsp;4&nbsp;Pro,
+        DJI Air&nbsp;3S (with RC2 controller), and the DJI Osmo Pocket&nbsp;3 for smooth
+        cinematic ground shots.
+      </p>
+
+      <p>
+        From the dramatic coastlines and historic landmarks of the UK to the crystal-clear
+        waters of the Maldives and Mauritius, the lush green jungles of Costa Rica and Mexico,
+        and the sunlit shores of Cyprus&nbsp;&mdash; my videos blend aerial footage and ground views
+        to bring each location to life.
+      </p>
+
+      <h2 class="about-subheading">Expect</h2>
+      <ul class="about-list">
+        <li>Breathtaking drone videography and cinematic travel films</li>
+        <li>Footage of nature, heritage sites, beaches, mountains, impressive structures and cities</li>
+        <li>Global locations filmed with DJI drones and professional gimbal cameras</li>
+      </ul>
+
+      <p class="about-note">
+        No paid promotions&nbsp;&mdash; just a passion for drone flying, filmmaking,
+        and exploring the world.
+      </p>
+
+      <a
+        class="subscribe-link"
+        href="https://youtube.com/@AirbourneLens"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <svg class="about-yt-icon" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
+        </svg>
+        Subscribe on YouTube
+      </a>
+    </div>
   </section>
 </BaseLayout>
 
 <style>
-  section {
+  .about-page {
     padding-top: 2rem;
+    max-width: 40rem;
   }
 
-  h1 {
+  .about-intro {
+    margin-bottom: 2rem;
+  }
+
+  .about-title {
     font-size: 1.5rem;
-    font-weight: 600;
+    font-weight: 700;
+    color: #e8e4dd;
     margin-bottom: 0.5rem;
   }
 
-  p {
-    color: #9ca3af;
+  .about-tagline {
+    color: #d4a84b;
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+
+  .about-body {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .about-body p {
+    color: #a09ba0;
+    line-height: 1.7;
+    font-size: 0.95rem;
+  }
+
+  .about-subheading {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #e8e4dd;
+    margin-top: 0.5rem;
+  }
+
+  .about-list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .about-list li {
+    color: #a09ba0;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    padding-left: 1.25rem;
+    position: relative;
+  }
+
+  .about-list li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0.55rem;
+    width: 0.4rem;
+    height: 0.4rem;
+    border-radius: 9999px;
+    background-color: #d4a84b;
+  }
+
+  .about-note {
+    font-style: italic;
+  }
+
+  .subscribe-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    align-self: flex-start;
+    margin-top: 0.5rem;
+    padding: 0.65rem 1.5rem;
+    background-color: #d4a84b;
+    color: #16161a;
+    font-weight: 600;
+    font-size: 0.875rem;
+    border-radius: 9999px;
+    text-decoration: none;
+    transition: background-color 0.15s;
+  }
+
+  .subscribe-link:hover {
+    background-color: #c49a3f;
+  }
+
+  .about-yt-icon {
+    width: 1.15rem;
+    height: 1.15rem;
   }
 </style>
